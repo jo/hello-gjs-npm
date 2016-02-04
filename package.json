@@ -1,0 +1,22 @@
+{
+  "name": "hello-gjs-npm",
+  "version": "1.0.0",
+  "description": "Example application demonstrating the use of Babel and Rollup to create an NPM installable and -runnable Gjs executable from ES2015 project source",
+  "bin": "bin/hello-gjs-npm",
+  "scripts": {
+    "start": "./bin/hello-gjs-npm",
+    "build": "rollup -c --output=dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jo/hello-gjs-npm.git"
+  },
+  "keywords": ["gnome", "gjs", "gtk", "gtk3"],
+  "author": "Johannes J. Schmidt <jo@die-tf.de> (https://www.die-tf.de)",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "rollup": "^0.25.2",
+    "rollup-plugin-babel": "^2.3.9"
+  }
+}

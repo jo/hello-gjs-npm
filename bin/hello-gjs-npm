@@ -1,0 +1,2 @@
+#/bin/sh
+GJS_PATH=`pwd`/dist gjs `pwd`/dist/main.js
