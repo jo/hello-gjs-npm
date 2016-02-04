@@ -1,6 +1,6 @@
 {
   "name": "hello-gjs-npm",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Example application demonstrating the use of Babel and Rollup to create an NPM installable and -runnable Gjs executable from ES2015 project source",
   "bin": "bin/hello-gjs-npm",
   "scripts": {
