@@ -1,4 +1,4 @@
-import HelloNPM from './hello-npm'
+import Application from './application'
 
-let app = new HelloNPM()
+let app = new Application()
 app.application.run(ARGV)

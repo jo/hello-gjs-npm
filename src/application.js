@@ -1,6 +1,6 @@
 const Gtk = imports.gi.Gtk
 
-export default class HelloNPM {
+export default class Application {
   constructor() {
     this.application = new Gtk.Application({
       application_id: 'com.example.hello-npm'
