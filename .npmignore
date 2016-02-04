@@ -1,3 +1,2 @@
 *
-!dist/main.js
-!bin/hello-gjs-npm
+!hello-gjs-npm
