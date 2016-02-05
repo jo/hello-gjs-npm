@@ -10,7 +10,8 @@
     "build:shebang": "echo '#!/usr/bin/env gjs\n' > hello-gjs-npm",
     "build:rollup": "rollup -c >> hello-gjs-npm",
     "build:permissions": "chmod +x hello-gjs-npm",
-    "test": "babel-node --presets=es2015 test/*/*-test.js | tap"
+    "test": "babel-node --presets=es2015 test/*/*-test.js | tap",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
