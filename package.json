@@ -1,22 +1,35 @@
 {
   "name": "hello-gjs-npm",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Example application demonstrating the use of Babel and Rollup to create an NPM installable and -runnable Gjs executable from ES2015 project source",
   "bin": "hello-gjs-npm",
   "scripts": {
-    "start": "hello-gjs-npm",
-    "build": "echo '#!/usr/bin/env gjs\n' > hello-gjs-npm && rollup -c >> hello-gjs-npm && chmod +x hello-gjs-npm"
+    "start": "PATH=`pwd`/:$PATH hello-gjs-npm",
+    "restart": "npm run build && npm start",
+    "build": "npm run build:shebang && npm run build:rollup && npm run build:permissions",
+    "build:shebang": "echo '#!/usr/bin/env gjs\n' > hello-gjs-npm",
+    "build:rollup": "rollup -c >> hello-gjs-npm",
+    "build:permissions": "chmod +x hello-gjs-npm",
+    "test": "babel-node --presets=es2015 test/*/*-test.js | tap"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/jo/hello-gjs-npm.git"
   },
-  "keywords": ["gnome", "gjs", "gtk", "gtk3"],
+  "keywords": [
+    "gnome",
+    "gjs",
+    "gtk",
+    "gtk3"
+  ],
   "author": "Johannes J. Schmidt <jo@die-tf.de> (https://www.die-tf.de)",
   "license": "Apache-2.0",
   "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
     "babel-preset-es2015-rollup": "^1.1.1",
     "rollup": "^0.25.2",
-    "rollup-plugin-babel": "^2.3.9"
+    "rollup-plugin-babel": "^2.3.9",
+    "tap": "^5.4.2"
   }
 }

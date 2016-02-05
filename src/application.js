@@ -1,3 +1,5 @@
+import hello from './hello'
+
 const Gtk = imports.gi.Gtk
 
 export default class Application {
@@ -24,11 +26,11 @@ export default class Application {
       window_position: Gtk.WindowPosition.CENTER,
       default_height: 600,
       default_width: 600,
-      title: 'Hello NPM'
+      title: hello()
     })
 
     let label = new Gtk.Label({
-      label: 'Hello NPM!'
+      label: hello()
     })
     this.window.add(label)
 
