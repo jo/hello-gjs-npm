@@ -1,7 +1,7 @@
 import babel from 'rollup-plugin-babel'
 
 export default {
-  entry: 'src/main.js',
+  input: 'src/main.js',
   plugins: [
     babel({
       presets: [
@@ -9,6 +9,8 @@ export default {
       ]
     })
   ],
-  moduleName: 'main',
-  format: 'iife'
+  name: 'main',
+  output: {
+    format: 'iife'
+  }
 }
